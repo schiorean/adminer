@@ -1,0 +1,15 @@
+body {
+	font: 100%/1.25 Arial,Helvetica,sans-serif;
+}
+
+pre, textarea {
+	font: 125%/1.25 monospace;
+}
+
+#tables li a.select {
+	margin-right: 1em;
+}
+
+html.remote #breadcrumb {
+	background-color: #ffbcbc;
+}
