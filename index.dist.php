@@ -12,11 +12,21 @@ function adminer_object() {
     
     $plugins = array(
         // specify enabled plugins here
+        new AminerJQuery,
         new FasterTablesFilter,
         new AdminerRemoteColor,
-        new OneClickLogin(require(dirname(__FILE__) . '/plugins/oneclick-login.config.php')),
+		new AdminerSqlLog,
+        new AdminerShortcuts,
+/*        new OneClickLogin(
+            [
+                'localhost' => [
+                ]
+            ]
+        ),
+*/
+
     );
-    
+
     /* It is possible to combine customization and plugins:
     class AdminerCustomization extends AdminerPlugin {
     }
@@ -24,10 +34,8 @@ function adminer_object() {
     */
     
     $plugin = new AdminerPlugin($plugins);
-    $plugin->plugins['AdminerPrettyJsonColumn'] = new AdminerPrettyJsonColumn($plugin);
     return $plugin;
 }
 
 // include original Adminer or Adminer Editor
-include "./adminer-4.7.4.php";
-?>
+include "./adminer.php";

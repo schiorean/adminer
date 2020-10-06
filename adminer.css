@@ -4,12 +4,14 @@ body {
 
 pre, textarea {
 	font: 125%/1.25 monospace;
+	color: #222;
 }
 
 #tables li a.select {
 	margin-right: 1em;
 }
 
-html.remote #breadcrumb {
-	background-color: #ffbcbc;
+/* Example of coloring the top breadcrumb  depending on selected server*/
+html.localhost #breadcrumb {
+	/*background-color: #ffbcbc;*/
 }
